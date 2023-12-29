@@ -34,31 +34,26 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     trigger('fadeIn', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('0.5s 2s ease-out', style({ opacity: 1 }))
+        animate('0.5s 1s ease-out', style({ opacity: 1 }))
       ])
     ]),
     trigger('slideIn', [
       transition(':enter', [
         style({ transform: 'translateX(-100%)' }),
-        animate('0.5s 4s ease-out', style({ transform: 'translateX(0)' }))
+        animate('0.5s 2s ease-out', style({ transform: 'translateX(0)' }))
       ])
-    ]),
-    trigger('expandCollapse', [
-      state('collapsed', style({ height: '0px', overflow: 'hidden' })),
-      state('expanded', style({ height: '*', overflow: 'auto' })),
-      transition('collapsed <=> expanded', animate('0.5s 6s ease-in-out'))
     ]),
     trigger('rotateFadeIn', [
       transition(':enter', [
         style({ transform: 'rotate(-90deg)', opacity: 0 }),
-        animate('0.5s 8s cubic-bezier(0.68, -0.55, 0.27, 1.55)', 
+        animate('0.5s 3s cubic-bezier(0.68, -0.55, 0.27, 1.55)', 
           style({ transform: 'rotate(0)', opacity: 1 }))
       ])
     ]),    
     trigger('zoomIn', [
       transition(':enter', [
         style({ transform: 'scale(0.5)', opacity: 0 }),
-        animate('0.5s 10s ease-in', style({ transform: 'scale(1)', opacity: 1 }))
+        animate('0.5s 4s ease-in', style({ transform: 'scale(1)', opacity: 1 }))
       ])
     ]),    
   ]
