@@ -24,15 +24,6 @@
   </div>
   <br />
   <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
-  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@expandCollapse]>
-    <mat-card role="complementary">
-      <h1>Input value: {{
-        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
-      }}</h1>
-    </mat-card>
-  </div>
-  <br />
-  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
   <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@rotateFadeIn]>
     <mat-card role="complementary">
       <h1>Input value: {{
