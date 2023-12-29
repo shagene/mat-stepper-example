@@ -1,0 +1,344 @@
+<div class="main-container" role="main">
+  <div class="breadcrumbs" role="navigation">
+    <span>breadcrumb / breadcrumb / more breadcrumbs</span>
+  </div>
+  <div class="title">
+    <h1>This is the page title</h1>
+  </div>
+  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
+  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@fadeIn]>
+    <mat-card role="complementary">
+      <h1>Input value: {{
+        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
+      }}</h1>
+    </mat-card>
+  </div>
+  <br />
+  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
+  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@slideIn]>
+    <mat-card role="complementary">
+      <h1>Input value: {{
+        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
+      }}</h1>
+    </mat-card>
+  </div>
+  <br />
+  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
+  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@expandCollapse]>
+    <mat-card role="complementary">
+      <h1>Input value: {{
+        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
+      }}</h1>
+    </mat-card>
+  </div>
+  <br />
+  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
+  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@rotateFadeIn]>
+    <mat-card role="complementary">
+      <h1>Input value: {{
+        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
+      }}</h1>
+    </mat-card>
+  </div>
+  <br />
+  <!-- Display captured input from Step 1 Card 1 repeated to show different animations -->
+  <div *ngIf="stepper.selectedIndex > 0" style="margin-bottom: 20px" [@zoomIn]>
+    <mat-card role="complementary">
+      <h1>Input value: {{
+        firstStepFirstCardFormGroup?.get("firstStepFirstCardFirstCtrl")?.value
+      }}</h1>
+    </mat-card>
+  </div>
+  <br />
+  <mat-horizontal-stepper #stepper linear role="tablist" class="customStepper">
+    <mat-step [completed]="false">
+      <ng-template matStepLabel>Step 1</ng-template>
+      <!-- Content for Step 1 -->
+      <div class="card-container">
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 1 Card 1 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="firstStepFirstCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 1 Card 1 Input 1"
+                  formControlName="firstStepFirstCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 1 Card 1 Input 2"
+                  formControlName="firstStepFirstCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <!-- Repeat for the second card -->
+        <br />
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 1 Card 2 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="firstStepSecondCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 1 Card 2 Input 1"
+                  formControlName="firstStepSecondCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 1 Card 2 Input 2"
+                  formControlName="firstStepSecondCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-step>
+    <mat-step [completed]="false">
+      <ng-template matStepLabel>Step 2</ng-template>
+      <!-- Content for Step 2 -->
+      <div class="card-container">
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 2 Card 1 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="secondStepFirstCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 2 Card 1 Input 1"
+                  formControlName="secondStepFirstCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 2 Card 1 Input 2"
+                  formControlName="secondStepFirstCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <!-- Repeat for the second card -->
+        <br />
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 2 Card 2 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="secondStepSecondCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 2 Card 2 Input 1"
+                  formControlName="secondStepSecondCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 2 Card 2 Input 2"
+                  formControlName="secondStepSecondCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-step>
+    <mat-step [completed]="false">
+      <ng-template matStepLabel>Step 3</ng-template>
+      <!-- Content for Step 3 -->
+      <div class="card-container">
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 3 Card 1 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="thirdStepFirstCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 3 Card 1 Input 1"
+                  formControlName="thirdStepFirstCardFirstCtrl"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 3 Card 1 Input 2"
+                  formControlName="thirdStepFirstCardSecondCtrl"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <!-- Repeat for the second card -->
+        <br />
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 3 Card 2 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="thirdStepSecondCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 3 Card 2 Input 1"
+                  formControlName="thirdStepSecondCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 3 Card 2 Input 2"
+                  formControlName="thirdStepSecondCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-step>
+    <mat-step [completed]="false">
+      <ng-template matStepLabel>Step 4</ng-template>
+      <!-- Content for Step 4 -->
+      <div class="card-container">
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 4 Card 1 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="fourthStepFirstCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 4 Card 1 Input 1"
+                  formControlName="fourthStepFirstCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 4 Card 1 Input 2"
+                  formControlName="fourthStepFirstCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <!-- Repeat for the second card -->
+        <br />
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 4 Card 2 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="fourthStepSecondCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 4 Card 2 Input 1"
+                  formControlName="fourthStepSecondCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 4 Card 2 Input 2"
+                  formControlName="fourthStepSecondCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-step>
+    <!-- Repeat <mat-step> for each step -->
+    <mat-step>
+      <ng-template matStepLabel>Step 5</ng-template>
+      <!-- Content for Step 5 -->
+      <div class="card-container">
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 5 Card 1 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="fifthStepFirstCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 5 Card 1 Input 1"
+                  formControlName="fifthStepFirstCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 5 Card 1 Input 2"
+                  formControlName="fifthStepFirstCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+        <!-- Repeat for the second card -->
+        <br />
+        <mat-card>
+          <mat-card-title class="cardTitle">Step 5 Card 2 Title</mat-card-title>
+          <mat-card-content>
+            <form [formGroup]="fifthStepSecondCardFormGroup">
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 5 Card 2 Input 1"
+                  formControlName="fifthStepSecondCardFirstCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+              <br />
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Step 5 Card 2 Input 2"
+                  formControlName="fifthStepSecondCardSecondCtrl"
+                  aria-label="Descriptive Label"
+                />
+              </mat-form-field>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <br />
+  <div class="button-container">
+    <div class="left-buttons">
+      <button mat-button (click)="stepper.previous()" aria-label="Button Info" role="button">Back</button>
+      <button mat-button (click)="goToNextStep()" aria-label="Button Info" role="button">Next</button>
+    </div>
+    <div class="right-button">
+      <button mat-button aria-label="Button Info" role="button">Cancel</button>
+    </div>
+  </div>
+</div>

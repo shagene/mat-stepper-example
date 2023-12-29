@@ -1,0 +1,45 @@
+.main-container {
+  margin: 0 10%;
+  max-width: 80%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    margin: 0 5%;
+    max-width: 90%;
+  }
+}
+
+.breadcrumbs {
+  font-size: smaller;
+  font-weight: bold;
+  color: grey;
+}
+
+.title {
+  font-weight: bolder;
+  color: magenta;
+}
+
+.customStepper {
+  background-color: lightblue;
+  padding-bottom: 24px;
+}
+
+.cardTitle {
+  margin: 12px 20px 12px 20px;
+  font-weight: bolder;
+  color: magenta;
+}
+
+.mat-card {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
